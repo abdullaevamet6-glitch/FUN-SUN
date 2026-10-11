@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FUN&SUN — магазин сервера</title>
+<style>
+:root{--bg:#10100c;--panel:#1a1a13;--line:#39351a;--yellow:#ffd329;--gold:#ffb800;--text:#fff9dd;--muted:#b9b49a}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 50% -10%,#4b3b06 0,transparent 44%),var(--bg);color:var(--text);font:16px/1.5 system-ui,Segoe UI,sans-serif}
+header{position:sticky;top:0;background:#11110deF;border-bottom:1px solid var(--line);backdrop-filter:blur(12px);z-index:2}
+nav{max-width:1100px;margin:auto;padding:16px 20px;display:flex;align-items:center;gap:18px;justify-content:space-between}
+.brand{font-weight:950;letter-spacing:1.4px;font-size:22px}.sun{color:var(--yellow)}.tag{color:var(--muted);font-size:12px}
+button{cursor:pointer;border:0;border-radius:12px;background:linear-gradient(135deg,var(--yellow),var(--gold));color:#201800;font-weight:850;padding:12px 16px}
+.wrap{max-width:1100px;margin:auto;padding:34px 20px}.hero{padding:44px 0 34px;display:grid;grid-template-columns:1.5fr 1fr;gap:24px;align-items:center}
+h1{font-size:clamp(36px,6vw,66px);line-height:1.02;margin:10px 0 16px;letter-spacing:-2px}.hero p{color:var(--muted);max-width:570px}
+.sunbox{min-height:210px;border:1px solid #5c4a0e;border-radius:28px;background:linear-gradient(145deg,#332907,#17170f 72%);display:grid;place-items:center;position:relative;overflow:hidden}
+.sunorb{width:135px;height:135px;border-radius:50%;background:radial-gradient(circle at 30% 25%,#fff5a5,var(--yellow) 46%,#f69e00);box-shadow:0 0 75px #ffc40066;position:relative}
+.sunorb:before{content:"";position:absolute;inset:-19px;border:2px dashed #ffd32966;border-radius:50%;animation:spin 25s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}.sectionhead{display:flex;align-items:end;justify-content:space-between;margin:28px 0 16px}h2{margin:0;font-size:25px}.muted{color:var(--muted);font-size:13px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.card{background:linear-gradient(155deg,#222116,var(--panel));border:1px solid var(--line);border-radius:19px;padding:20px;transition:.2s;min-height:190px;display:flex;flex-direction:column}.card:hover{transform:translateY(-3px);border-color:#9c7b10;box-shadow:0 12px 35px #0004}.icon{font-size:28px}.card h3{margin:12px 0 6px}.card p{color:var(--muted);font-size:14px;flex:1}.price{font-size:24px;font-weight:900;color:var(--yellow);margin:10px 0}.footer{border-top:1px solid var(--line);padding:22px 20px;color:var(--muted);text-align:center;font-size:13px}
+@media(max-width:720px){.hero{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.sunbox{min-height:170px}.wrap{padding-top:20px}}
+</style>
+</head>
+<body>
+<header><nav><div><div class="brand"><span class="sun">☀</span> FUN&SUN</div><div class="tag">MINECRAFT SERVER STORE</div></div><button onclick="alert('В полной версии здесь будет корзина и вход в аккаунт')">Корзина · 0</button></nav></header>
+<main class="wrap">
+<section class="hero"><div><div class="tag sun">ТВОИ ПРИВИЛЕГИИ. ТВОЯ ИГРА.</div><h1>Стань частью<br><span class="sun">FUN&SUN</span></h1><p>Ранги, ключи и игровая валюта для приключений. Покупки сохраняются, а если ты офлайн — выдача дождётся твоего входа на сервер.</p><button onclick="document.getElementById('shop').scrollIntoView({behavior:'smooth'})">Открыть магазин ↓</button></div><div class="sunbox"><div class="sunorb"></div></div></section>
+<div class="sectionhead" id="shop"><div><div class="tag sun">ВЫБЕРИ СВОЁ</div><h2>Магазин сервера</h2></div><div class="muted">Демо-дизайн · покупки пока отключены</div></div>
+<div class="grid">
+<article class="card"><div class="icon">⚔️</div><h3>Привилегии</h3><p>Pro, Герб, Премиум, Элита, Ветеран и другие ранги.</p><div class="price">от 20 ₽</div><button onclick="alert('Это визуальный прототип — покупки пока не подключены.')">Выбрать ранг</button></article>
+<article class="card"><div class="icon">🪙</div><h3>Игровая валюта</h3><p>Поинты PlayerPoints и деньги EssentialsX. Количество выбираешь сам.</p><div class="price">от 1 ₽</div><button onclick="alert('Это визуальный прототип — покупки пока не подключены.')">Выбрать валюту</button></article>
+<article class="card"><div class="icon">🗝️</div><h3>Ключи кейсов</h3><p>Ключи CrazyCrates. Укажи количество и Minecraft-ник получателя.</p><div class="price">20 ₽ / ключ</div><button onclick="alert('Это визуальный прототип — покупки пока не подключены.')">Выбрать ключи</button></article>
+</div>
+</main><footer class="footer">FUN&SUN · Тестовый макет. Оплата, баланс и выдача ещё не подключены.</footer>
+</body></html>
